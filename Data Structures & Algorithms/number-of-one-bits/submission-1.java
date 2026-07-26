@@ -1,0 +1,16 @@
+class Solution {
+    public int hammingWeight(int n) {
+        int count = 0;
+        // for(int i = 0; i<32; i++){
+        //     count = count +( (n & (1<<i)) > 0 ? 1: 0);
+        // }
+        // return count;
+
+        while(n!=0){
+            count++;
+            n = n & (n-1);
+        }
+
+        return count;
+    }
+}
